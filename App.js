@@ -1,15 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Main screens from './screens/Main screens';
+import HomeScreen from './screens/HomeScreen';
+import DetailsScreen from './screens/DetailsScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Main screens">
-          <Stack.Screen name="Main screens" component={Main screens} />
+      <Stack.Navigator initialRouteName="HomeScreen">
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
